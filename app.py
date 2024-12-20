@@ -3,6 +3,15 @@ import joblib
 import pandas as pd
 import json
 
+page_bg_img = '''
+<style>
+body {
+    background-image: url("fondo.jpg");
+    background-size: cover;
+}
+</style>
+'''
+
 # Add a new page for Power BI chart
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Predict Price", "Power BI Chart"])
