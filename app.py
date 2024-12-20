@@ -19,7 +19,7 @@ else:
     feature_scaler = joblib.load(r'./feature_scaler.pkl')
     target_scaler = joblib.load(r'./target_scaler.pkl')
 
-    with open(r'./data\jsons\room_type_encoding.json', 'r') as f:
+    with open(r'./data/jsons/room_type_encoding.json', 'r') as f:
         room_type_dict = json.load(f)
         
     # Define the features used in the model
