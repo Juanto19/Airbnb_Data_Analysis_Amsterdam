@@ -11,7 +11,7 @@ page_bg_img = '''
 }
 </style>
 '''
-
+st.markdown(page_bg_img, unsafe_allow_html=True)
 # Add a new page for Power BI chart
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Predict Price", "Power BI Chart"])
