@@ -5,7 +5,7 @@ import json
 
 page_bg_img = '''
 <style>
-body {
+[data-testid="stAppViewContainer"] {
     background-image: url("fondo.jpg");
     background-size: cover;
 }
