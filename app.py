@@ -3,15 +3,14 @@ import joblib
 import pandas as pd
 import json
 
-page_bg_img = '''
-<style>
-[data-testid="stAppViewContainer"] {
-    background-image: url("fondo.jpg");
-    background-size: cover;
-}
-</style>
-'''
-st.markdown(page_bg_img, unsafe_allow_html=True)
+# Función para cargar el CSS
+def load_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# Carga del CSS
+load_css("style.css")
+
 # Add a new page for Power BI chart
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Predict Price", "Power BI Chart"])
