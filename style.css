@@ -1,16 +1,95 @@
 /* style.css */
-body {
-    background-color: #f4f4f4;
-    font-family: 'Arial', sans-serif;
+
+/* Cambiar el fondo general a un gradiente */
+html, body, [data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #cdf7fc, #eaeace, #eaeace, #cdf7fc);
+    background-size: 400% 400%; /* Para animación suave, si es deseado */
+    animation: gradientBG 30s ease infinite; /* Animación opcional */
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2, h3 {
-    color: #2c3e50;
-    text-align: center;
+
+/* Opcional: Animación del gradiente */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+/* Cambiar el estilo del bloque superior (header o navbar) */
+header[data-testid="stHeader"] {
+    background: transparent; /* Hacer el fondo transparente */
+    color: #2c3e50; /* Color del texto, si es necesario */
+    border-bottom: 0px solid #000000; /* Línea opcional para separación */
+}
+
+/* Opcional: Ajustar el padding y márgenes */
+header[data-testid="stHeader"] {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Cambiar el color de fondo de la barra lateral */
+section[data-testid="stSidebar"] {
+    width: 300px;
+    background: linear-gradient(135deg, #cdf7fc, #eaeace);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+body {
+    font-family: 'Arial', sans-serif; /* Cambia a tu fuente preferida */
+    color: #222222; /* Color global del texto */
+    font-size: 16px; /* Tamaño base de la fuente */
+    line-height: 1.6; /* Espaciado entre líneas para legibilidad */
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif; /* Fuente específica para los títulos */
+    color: #000000; /* Color único para los títulos */
+    font-weight: bold; /* Texto más grueso */
+    text-align: center; /* Centrar los encabezados */
+}
+
+/* Cambiar el texto en los campos de entrada (input) */
+input[type="number"] {
+    font-family: 'Arial', sans-serif; /* Cambia la fuente */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    color: #222222; /* Cambia el color del texto */
+}
+
+
+
+/* Cambiar el texto en los desplegables (select) */
+select {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #0aeb15;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .stButton > button {
-    background-color: #3498db;
+    background-color: #34db63;
     color: white;
     border-radius: 10px;
     border: none;
@@ -20,24 +99,13 @@ h1, h2, h3 {
 }
 
 .stButton > button:hover {
-    background-color: #2980b9;
+    background-color: #26a42c;
     cursor: pointer;
 }
 
 .sidebar .sidebar-content {
-    background-color: #ecf0f1;
+    background: transparent;
     border-radius: 10px;
     padding: 20px;
 }
 
-.css-1d391kg {
-    font-weight: bold;
-    color: #8e44ad;
-}
-
-footer {
-    text-align: center;
-    color: #7f8c8d;
-    font-size: 12px;
-    padding: 10px;
-}

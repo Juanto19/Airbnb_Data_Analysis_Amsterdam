@@ -3,6 +3,11 @@ import joblib
 import pandas as pd
 import json
 
+st.set_page_config(
+    layout="wide",    
+    initial_sidebar_state="collapsed"
+)
+
 # Función para cargar el CSS
 def load_css(file_name):
     with open(file_name) as f:
@@ -11,14 +16,18 @@ def load_css(file_name):
 # Carga del CSS
 load_css("style.css")
 
+
 # Add a new page for Power BI chart
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Predict Price", "Power BI Chart"])
 
 if page == "Power BI Chart":
     st.title("Power BI Chart")
+    col1, col2, col3 = st.columns([1, 8, 1])
     powerbi_url = "https://app.powerbi.com/view?r=eyJrIjoiN2U0NDQyOWQtNzg3Yy00N2Q5LWIyZDQtN2FhZWZmMmM1YWRjIiwidCI6IjhhZWJkZGI2LTM0MTgtNDNhMS1hMjU1LWI5NjQxODZlY2M2NCIsImMiOjl9"
-    st.components.v1.iframe(powerbi_url, height=600)
+    with col2:
+        st.components.v1.iframe(powerbi_url, width = 1060, height=680)
+
 
 else:
 
