@@ -23,7 +23,6 @@ html, body, [data-testid="stAppViewContainer"] {
 /* Cambiar el estilo del bloque superior (header o navbar) */
 header[data-testid="stHeader"] {
     background: transparent; /* Hacer el fondo transparente */
-    color: #2c3e50; /* Color del texto, si es necesario */
     border-bottom: 0px solid #000000; /* Línea opcional para separación */
 }
 
@@ -32,16 +31,6 @@ header[data-testid="stHeader"] {
     padding: 10px;
     margin-bottom: 10px;
 }
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 
 /* Cambiar el color de fondo de la barra lateral */
 section[data-testid="stSidebar"] {
