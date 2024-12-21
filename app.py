@@ -79,5 +79,5 @@ else:
         # Inverse transform the prediction
         prediction = target_scaler.inverse_transform(prediction_scaled.reshape(-1, 1))[0][0]
         # Display the prediction
-        st.success(f"The predicted price is ${prediction:.2f}")
+        st.success(f"The predicted price for one night is ${prediction:.2f}")
 
